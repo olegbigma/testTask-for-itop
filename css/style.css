@@ -1,0 +1,542 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #F1F1F1;
+}
+
+a {
+  text-decoration: none;
+  color: #BBBABA;
+}
+
+h1, h2 {
+  font-size: 55px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.button {
+  display: block;
+  padding: 20px 25px;
+  background: #F93524;
+  font-size: 16px;
+  color: #fff;
+  transition: all .3s;
+  text-align: center;
+}
+.button:hover {
+  background: #cb1506;
+  color: #bfbfbf;
+  transition: all .3s;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+header {
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right 0;
+  box-shadow: 777px -90px 200px 110px #000 inset;
+}
+
+.top-line .logo {
+  margin-right: 90px;
+  flex-grow: 0;
+}
+
+.nav {
+  flex-grow: 1;
+}
+.nav .nav__tel {
+  letter-spacing: 8px;
+}
+
+.nav__link {
+  letter-spacing: 10px;
+  font-size: 12px;
+  display: block;
+  width: 225px;
+  padding: 3px;
+  text-align: center;
+}
+.nav__link:hover {
+  font-size: 13px;
+  font-weight: 800;
+  color: #F93524;
+  transition: all .1s;
+}
+
+.nav-burger {
+  display: none;
+  font-size: 28px;
+}
+
+.nav-burger-checkbox {
+  display: none;
+}
+
+.title-block {
+  padding: 90px 0;
+}
+.title-block .button {
+  display: inline-block;
+}
+.title-block__description {
+  margin: 40px 0 35px;
+  line-height: 2.3;
+  color: #BBBABA;
+}
+
+.info-block {
+  padding: 40px 0;
+}
+.info-block .info-block__socials img {
+  margin-right: 30px;
+}
+.info-block .advantages .advantages__item {
+  margin-left: 100px;
+}
+.info-block .advantages .advantages__item h6 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.info-block .advantages .advantages__item p {
+  line-height: 1.7;
+}
+
+.services {
+  padding: 120px 0;
+  text-align: center;
+}
+.services .title {
+  line-height: 2.1;
+}
+
+.services-button {
+  display: none;
+  margin: 15px auto;
+}
+
+.services-title__description {
+  line-height: 2.3;
+  color: #BBBABA;
+}
+
+.services-items {
+  margin-top: 30px;
+}
+.services-items .services-items__img {
+  box-shadow: 8px 8px 30px 30px #000 inset;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 310px;
+  height: 320px;
+}
+.services-items .first-image {
+  background-image: url(../img/39376813-car-cleaning-team.png);
+}
+.services-items .second-image {
+  background-image: url(../img/Best-Car-detailing-kits.png);
+}
+.services-items .third-image {
+  background-image: url(../img/1463.png);
+}
+.services-items h5 {
+  font-size: 2.7rem;
+  line-height: 2.1;
+  margin-top: 10px;
+}
+.services-items p {
+  line-height: 2.3;
+  color: #BBBABA;
+}
+
+.learn-more, .detailing__link {
+  font-size: 14px;
+  color: #F93524;
+  position: relative;
+  text-align: right;
+  display: block;
+  padding: 20px 60px;
+  transition: all .2s;
+}
+.learn-more:before, .detailing__link:before {
+  content: '';
+  width: 77px;
+  border: 1px solid #F93524;
+  position: absolute;
+  left: 60px;
+  top: 50%;
+}
+.learn-more:hover, .detailing__link:hover {
+  color: #fc9187;
+  transition: all .4s;
+}
+.learn-more:hover::before, .detailing__link:hover::before {
+  border: 1px solid #fc9187;
+}
+
+.detailing {
+  padding: 50px 0 90px 0;
+}
+.detailing__link {
+  text-align: left;
+  padding: 20px 97px;
+  display: inline-block;
+}
+.detailing__link:before {
+  left: 0;
+}
+.detailing__link .bold {
+  font-weight: 800;
+}
+
+.detailing-block__title {
+  font-size: 3.4rem;
+  font-weight: 800;
+  flex-grow: 2;
+}
+.detailing-block__description {
+  line-height: 2.3;
+  color: #BBBABA;
+  width: 340px;
+  flex-grow: 1;
+}
+
+.detailing__slider {
+  padding-top: 30px;
+}
+.detailing__slider .slider-item {
+  width: 300px;
+  height: 300px;
+  margin: 0 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #BBBABA;
+  transition: all .2s;
+  -webkit-filter: grayscale(1);
+  /* Webkit браузеры */
+  filter: gray;
+  /* для IE6-9 */
+  filter: grayscale(1);
+  /* W3C */
+}
+.detailing__slider .slider-item:hover {
+  transition: all .3s;
+  border: 1px solid #F93524;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: none;
+  -webkit-filter: grayscale(0);
+  cursor: pointer;
+}
+.detailing__slider .first-img {
+  background-image: url(../img/Best-Car-detailing-kits.png);
+}
+.detailing__slider .second-img {
+  background-image: url(../img/Large-8629McLaren.png);
+}
+.detailing__slider .third-img {
+  background-image: url(../img/1463.png);
+}
+.detailing__slider .fourth-img {
+  background-image: url(../img/176.png);
+}
+.detailing__slider .fifth-img {
+  background-image: url(../img/39376813-car-cleaning-team.png);
+}
+
+.questions-block {
+  padding: 90px 0;
+}
+.questions-block .form-title {
+  font-size: 3.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  display: block;
+}
+
+.questions .accordeon {
+  background-color: #252525;
+  position: relative;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  padding: 20px 60px;
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.questions .accordeon:after {
+  transform: rotate(-45deg);
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  right: 60px;
+  top: 45%;
+}
+.questions .accordeon:first-child {
+  margin-top: 0;
+}
+.questions .active {
+  opacity: .8;
+}
+.questions .active:after {
+  transform: rotate(45deg);
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  right: 60px;
+  top: 45%;
+}
+.questions .panel {
+  padding: 0 40px;
+  color: #fff;
+  background-color: #252525;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  width: 583px;
+  opacity: .8;
+}
+.questions .panel p {
+  width: 100%;
+  line-height: 2.3;
+  color: #BBBABA;
+  padding: 0 20px 15px;
+}
+
+.form {
+  width: 100%;
+  margin-left: 20px;
+}
+.form form .input, .form form textarea {
+  display: block;
+  width: 100%;
+  background: #000;
+  margin-bottom: 25px;
+  margin-right: 0;
+  padding: 0 20px 0 40px;
+  color: #fff;
+  font-size: 2rem;
+  box-sizing: border-box;
+}
+.form form .input::placeholder, .form form textarea::placeholder {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.7;
+}
+.form form .input {
+  height: 64px;
+}
+.form form textarea {
+  padding-top: 20px;
+}
+.form form .submit {
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+footer {
+  padding-bottom: 100px;
+}
+
+.map {
+  width: 720px;
+  height: 580px;
+  box-shadow: -20px 0px 60px 70px #000 inset;
+  background-image: url(../img/map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts-info {
+  margin-top: 60px;
+}
+
+.contacts-info__title {
+  font-size: 3.4rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.contacts-info__subtitle {
+  font-size: 2.2rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  line-height: 2.3;
+}
+
+.adress {
+  line-height: 2.3;
+  color: #BBBABA;
+  font-size: 12px;
+}
+
+@media (max-width: 1199px) {
+  header {
+    background-size: contain;
+    background-position: right center;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+
+  .nav {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    display: none;
+  }
+  .nav__link {
+    width: 100%;
+    padding: 15px 0;
+    background: #000;
+  }
+  .nav__link:hover {
+    background: #333333;
+  }
+
+  .top-line {
+    position: fixed;
+    background: #000;
+    width: 100%;
+    right: 0;
+  }
+  .top-line .logo {
+    margin-left: 40px;
+  }
+
+  .nav-burger {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+  }
+
+  .nav-burger-checkbox:checked ~ .nav {
+    display: block;
+  }
+
+  .title-block {
+    padding: 110px 0 10px;
+  }
+  .title-block .title-block__title {
+    font-size: 34px;
+  }
+
+  .title-block__description {
+    margin-top: 360px;
+  }
+
+  .info-block .advantages {
+    display: none;
+  }
+
+  .services-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .services-items .second-item, .services-items .third-item {
+    display: none;
+  }
+
+  .services-button {
+    display: block;
+  }
+
+  .detailing, .questions-block, footer {
+    display: none;
+  }
+
+  .services {
+    padding: 0 0 20px;
+  }
+}
+@media (max-width: 1660px) {
+  header {
+    box-shadow: 585px -90px 100px 0px #000 inset;
+  }
+}
+@media (max-width: 1485px) {
+  header {
+    box-shadow: 390px -90px 100px 0px #000 inset;
+  }
+}
+@media (max-width: 1280px) {
+  header {
+    box-shadow: 180px -90px 100px 80px #000 inset;
+  }
+}
+@media (max-width: 680px) {
+  .title-block__description {
+    margin-top: 270px;
+  }
+
+  .services {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 1000px) {
+  header {
+    box-shadow: 0px 0px 0px 0px #000 inset;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

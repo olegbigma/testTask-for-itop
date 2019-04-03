@@ -1,0 +1,111 @@
+@media (max-width: 1199px){
+    header{
+        background-size: contain;
+        background-position: right center;
+        // box-shadow: 130px -90px 100px 150px #000 inset;
+    }
+    .container{
+        padding: 0 40px;
+    }
+    .nav{
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        display: none;
+        &__link{
+            width: 100%;
+            padding: 15px 0;
+            background: #000;
+            &:hover{
+                background: lighten($color: #000, $amount: 20%);
+            }
+        }
+    }
+    .top-line{
+        position: fixed;
+        background: #000;
+        width: 100%;
+        right: 0;
+        .logo{
+            margin-left: 40px;
+        }
+    }
+    .nav-burger{
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+    .nav-burger-checkbox{
+        &:checked{
+            ~ .nav{
+                display: block;
+            }
+        }
+    }
+    .title-block{
+        padding: 110px 0 10px;
+    .title-block__title{
+        font-size: 34px;
+        }
+    }
+    .title-block__description{
+        margin-top: 360px;
+    }
+    .info-block{
+        .advantages{
+            display: none;
+        }
+    }
+
+    //    second screen
+    .services-items{
+        flex-direction: column;
+        align-items: center;
+        .second-item , .third-item{
+            display: none;
+        }
+    }
+    .services-button{
+        display: block;
+    }
+    .detailing , .questions-block , footer{
+        display: none;
+    }
+    .services {
+        padding: 0 0 20px;
+    }
+}
+
+@media (max-width: 1660px){
+    header{
+        box-shadow: 585px -90px 100px 0px #000 inset;
+    }
+}
+@media (max-width: 1485px){
+    header{
+        box-shadow: 390px -90px 100px 0px #000 inset;
+    }
+}
+@media (max-width: 1280px){
+    header{
+        box-shadow: 180px -90px 100px 80px #000 inset;
+    }
+}
+@media (max-width: 680px){
+    .title-block__description{
+        margin-top: 270px;
+     }
+     .services{
+        padding: 20px 0;
+     }
+     
+}
+@media (max-width: 1000px){
+    header{
+        box-shadow: 0px 0px 0px 0px #000 inset;
+     }
+}
+

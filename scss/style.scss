@@ -1,0 +1,334 @@
+@import 'settings';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900');
+
+header{
+    background-image: url(../img/background.png); 
+    background-repeat: no-repeat;
+    background-size:  auto ;
+    background-position: right 0;
+    box-shadow: 777px -90px 200px 110px #000 inset;
+}
+
+.top-line{
+    .logo{
+        margin-right: 90px;
+        flex-grow: 0;
+    }
+}
+.nav{
+    flex-grow: 1;
+    .nav__tel{
+        letter-spacing: 8px;
+    }
+}
+.nav__link{
+    letter-spacing: 10px;
+    font-size: $fz+1px;
+    display: block;
+    width: 225px;
+    padding: 3px;
+    text-align: center;
+    &:hover{
+        font-size: $fz+2px;
+        font-weight: 800;
+        color: $contrastcolor;
+        transition: all .1s;
+    }
+}
+.nav-burger{
+    display: none;
+    font-size: 28px;
+}
+.nav-burger-checkbox{
+    display: none;
+}
+
+.title-block{
+    padding: 90px 0;
+    .button{
+        display: inline-block;;
+    }
+    &__description{
+        margin: 40px 0 35px;
+        @include description;
+    }
+}
+
+
+.info-block{
+    padding: 40px 0;
+    .info-block__socials{
+        img{
+            margin-right: 30px;
+        }
+    }
+    .advantages{
+        .advantages__item{
+            margin-left: 100px;
+            h6{
+                font-size: $fz+8px;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+            p{
+                line-height: 1.7;
+            }
+        }
+    }
+}
+//-------------------------------- services
+.services{
+    padding: 120px 0;
+    text-align: center;
+    .title{
+        line-height: 2.1;
+    }
+}
+.services-button{
+    display: none;
+    margin: 15px auto;
+}
+.services-title__description{
+    @include description;
+}
+.services-items{
+    margin-top: 30px;
+    .services-items__img{
+        box-shadow: 8px 8px 30px 30px #000 inset;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 310px;
+        height: 320px;
+    }
+    .first-image{
+        background-image: url(../img/39376813-car-cleaning-team.png);    
+    }
+    .second-image{
+        background-image: url(../img/Best-Car-detailing-kits.png);
+    }
+    .third-image{
+        background-image: url(../img/1463.png);
+    }
+    h5{
+        font-size: 2.7rem;
+        line-height: 2.1;
+        margin-top: 10px;
+    }
+    p{
+        @include description;
+    }
+}
+.learn-more{
+    font-size: $fz+3px;
+    color: $contrastcolor;
+    position: relative;
+    text-align: right;
+    display: block;
+    padding: 20px 60px;
+    transition: all .2s;
+    &:before{
+      content: '';
+      width: 77px; 
+      border: 1px solid $contrastcolor;
+      position: absolute;
+      left: 60px;
+      top: 50%;
+    }
+    &:hover{
+        color: lighten($color: $contrastcolor, $amount: 20%);
+        transition: all .4s;
+        &::before{
+            border: 1px solid lighten($color: $contrastcolor, $amount: 20%);
+        }
+    }
+}
+
+//---------------------------------detailing
+.detailing{
+    padding: 50px 0 90px 0;
+    &__link{
+        @extend .learn-more;
+        text-align: left;
+        padding: 20px 97px;
+        display: inline-block;
+        &:before{
+            left: 0;
+        }
+        .bold{
+            font-weight: 800;
+        }
+    }
+}
+.detailing-block{
+    &__title{
+        @include subtitle;
+        flex-grow: 2;
+    }
+    &__description{
+        @include description;
+        width: 340px;
+        flex-grow: 1;
+    }
+}
+.detailing__slider{
+    padding-top: 30px;
+    .slider-item{
+        width: 300px;
+        height: 300px;
+        margin: 0 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid $textcolor2;
+        transition: all .2s;
+        -webkit-filter: grayscale(1); /* Webkit браузеры */  
+        filter: gray; /* для IE6-9 */  
+        filter: grayscale(1); /* W3C */ 
+        &:hover{
+            transition: all .3s;
+            border: 1px solid $contrastcolor;
+            -webkit-filter: grayscale(0%);
+            -moz-filter: grayscale(0%);
+            -ms-filter: grayscale(0%);
+            -o-filter: grayscale(0%);
+            filter: none;
+            -webkit-filter: grayscale(0);
+            cursor: pointer;  
+        }
+    }
+    .first-img{
+        background-image: url(../img/Best-Car-detailing-kits.png);  
+    }
+    .second-img{
+        background-image: url(../img/Large-8629McLaren.png);
+    }
+    .third-img{
+        background-image: url(../img/1463.png);
+    }
+    .fourth-img{
+        background-image: url(../img/176.png);
+    }
+    .fifth-img{
+        background-image: url(../img/39376813-car-cleaning-team.png);
+    }
+}
+// ----------------------------------form
+.questions-block{
+    padding: 90px 0;
+    .form-title{
+        @include subtitle;
+        text-align: center;
+        margin-bottom: 50px;
+        display: block;
+    }
+}
+.questions{
+    .accordeon {
+        background-color: $formcolor;
+        position: relative;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        padding: 20px 60px;
+        margin-top: 20px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: $fz+5px;
+        transition: 0.5s;
+        &:after {
+            transform: rotate(-45deg);
+            @include arrows;  
+        }
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    .active{
+        opacity: .8;  
+        &:after {
+            transform: rotate(45deg);
+            @include arrows;
+        }
+    }
+    .panel {
+        padding: 0 40px;
+        color: #fff;
+        background-color: $formcolor;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        width: 583px;
+        opacity: .8;
+        p{
+            width: 100%;
+            @include description;
+            padding: 0 20px 15px;
+        }
+    }
+}
+.form{
+    width: 100%;
+    margin-left:20px ;
+    form{    
+        .input , textarea {
+            display: block;
+            width: 100%;
+            background: #000;
+            margin-bottom: 25px;
+            margin-right: 0;
+            padding:0 20px 0 40px;
+            color: #fff;
+            font-size: 2rem;
+            box-sizing: border-box;
+            &::placeholder{
+                font-size: $fz+5px;
+                color: #fff;
+                opacity: 0.7;
+            }
+        }
+        .input{
+            height: 64px;
+        }
+        textarea{
+            padding-top: 20px;
+        }
+        .submit{
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+}
+// ----------------------------footer
+footer{
+    padding-bottom: 100px;
+}
+
+.map{
+    width: 720px;
+    height: 580px;
+    box-shadow: -20px 0px 60px 70px #000 inset;
+    background-image: url(../img/map.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contacts-info{
+    margin-top: 60px;
+}
+.contacts-info__title{
+    @include subtitle; 
+    margin-bottom: 50px;
+}
+.contacts-info__subtitle{
+    font-size: 2.2rem;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    line-height: 2.3;
+}
+.adress{
+    @include description;
+    font-size: $fz+1px;
+}
+@import 'responsive';
+

@@ -1,0 +1,94 @@
+$bgcolor:#000;
+$textcolor1:#F1F1F1;
+$textcolor2:#BBBABA;
+$contrastcolor:#F93524;
+$formcolor:#252525;
+
+$fz:11px;
+
+body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $bgcolor;
+    font-family: 'Montserrat', sans-serif;
+    font-size: $fz;
+    font-weight: 500;
+    color: $textcolor1;
+}
+
+a{
+    text-decoration: none;
+    color: $textcolor2;
+}
+
+h1,h2{
+    font-size: 55px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.button{
+    display: block;
+    padding: 20px 25px;
+    background: $contrastcolor;
+    font-size: $fz+5px;
+    color: #fff;
+    transition: all .3s;
+    text-align: center;
+    &:hover{
+        background: darken($color: $contrastcolor, $amount: 15%);
+        color: darken($color: #fff, $amount: 25%);
+        transition: all .3s;
+    }
+}
+@mixin subtitle{
+    font-size: 3.4rem;
+    font-weight: 800;
+}
+
+@mixin description{
+    line-height: 2.3;
+    color: $textcolor2;
+}
+@mixin arrows{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    box-sizing: border-box;
+    right: 60px;
+    top: 45%;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-around{
+    justify-content: space-around;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
